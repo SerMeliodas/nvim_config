@@ -1,7 +1,7 @@
-source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/plug.vim
 " Start NERDTree and leave the cursor in it.
 autocmd VimEnter * NERDTree
-colorscheme OceanicNext 
+colorscheme onedark
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 set mouse=a  " enable mouse
@@ -9,7 +9,7 @@ set encoding=utf-8
 set number
 set noswapfile
 set scrolloff=7
-
+set clipboard=unnamedplus
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -25,7 +25,8 @@ set expandtab
 set shiftwidth=2
 
 inoremap jk <esc>
-
+vnoremap <Leader>y "+y
+vnoremap <Leader>p "+p
 
 lua << EOF
 -- Set completeopt to have a better completion experience
