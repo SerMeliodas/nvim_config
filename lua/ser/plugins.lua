@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
     -- themes
     use 'morhetz/gruvbox' 
     use 'alessandroyorba/alduin'
+    use "rebelot/kanagawa.nvim"
 
     use 'mattn/emmet-vim' 
 
@@ -44,10 +45,15 @@ return require('packer').startup(function(use)
     use 'xiyaowong/nvim-transparent'
 
     -- lsp settings
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
     use 'neovim/nvim-lspconfig'
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'jose-elias-alvarez/nvim-lsp-ts-utils'
-    use 'nvim-lua/plenary.nvim'
+    -- use 'nvim-lua/plenary.nvim'
 
     -- autocomplete
     use 'hrsh7th/nvim-cmp'
@@ -58,9 +64,9 @@ return require('packer').startup(function(use)
     --telescope
 
     use {
-    "nvim-telescope/telescope.nvim",
-    tag = "0.1.0",
-    requires = { { "nvim-lua/plenary.nvim" } },
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.0",
+        requires = { { "nvim-lua/plenary.nvim" } },
     }
     use "nvim-telescope/telescope-file-browser.nvim"
 end)

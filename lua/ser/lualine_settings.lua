@@ -1,5 +1,5 @@
 require("lualine").setup({
 	options = {
-		icons_enbled = false
+		icons_enbled = false,
 	}
 })

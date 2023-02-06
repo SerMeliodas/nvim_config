@@ -4,8 +4,10 @@ local opt = vim.opt
 
 g.user_emmet_leader_key = '<C-Y>'
 --theme
+
 opt.termguicolors = true
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme kanagawa')
+
 g.python3_host_prog = '/usr/bin/python3'
 o.scrolloff = 5
 o.clipboard = "unnamedplus"
